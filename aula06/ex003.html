@@ -27,14 +27,30 @@
 
     <script>
 
-        var n1 = Number.parseInt(window.prompt('Digite um número:'))
-        var n2 = Number.parseInt(window.prompt('Digite outro numero:'))
+        /* 
+        
+        String -> Número
+
+        "variavel" denominada como "n1" recebe "number" onde irá avisar o Js que está se tratando de números / (Window.prompt abrirá uma opção de colocar dados)
+
+        "variavel" denominada como "n2" recebe "number" onde irá avisar o Js que está se tratando de números / (Window.prompt abrirá uma opção de colocar dados)
+
+        "variavel" denominada como "s" recebe "n1 + n2"
+
+        Utilizo um (window.alert) alertando o resultado final = "s", a variavel denominada.
+
+        */
+
+        var n1 = Number (window.prompt('Digite um número:'))
+        var n2 = Number (window.prompt('Digite outro número:'))
         var s = n1 + n2
-        window.alert('a soma dos valores é igual a: ' +s)
+        window.alert(`O resultado de ${n1} mais ${n2} vai ser igual a ${s}`)
+
+        // Para tornar o 's' em uma string basta usar String(s))
 
     </script>
 
-
+    >
 </body>
 
 </html>
