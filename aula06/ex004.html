@@ -9,10 +9,18 @@
 
 <body>
     <script>
-        var nome = window.prompt('Por favor, digite o seu nome:')
-        document.write(`Olá, <strong>${nome}!</strong> Tudo bem? O seu nome possui ${nome.length} letras! <br>`)
-        document.write(`O seu nome em maiúsculo é ${nome.toUpperCase()} <br>`)
-        document.write(`O seu nome em minúsculo é ${nome.toLowerCase()}`)
+
+        var n1 = Number(window.prompt('Digite por gentileza um número:'))
+        var n2 = Number(window.prompt('Digite por gentileza outro número:'))
+        var s = n1 + n2
+        window.alert(`O resultado da soma entre ${n1} e ${n2} é de ${s}!`)
+
+        var nome = window.prompt('Escreva por gentileza o seu nome:')
+        document.write(`Òlá, ${nome}! Tudo bem? O seu nome possui ${nome.length} letras! <br>`)
+        document.write(`${nome}, o seu nome em maiúsclo é ${nome.toLocaleUpperCase()}! <br>`)
+        document.write(`${nome}, o seu nome em minúsculo é ${nome.toLowerCase()}`)
+
+
 
     </script>
 
