@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+
+    <style>
+        #box{
+            width: 300px;
+            height: 300px;
+            background-color: rgb(46, 151, 111);
+            text-align: center;
+            line-height: 300px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18pt;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="box">Mude de cor!</div>
+    <script>
+        var area = window.document.getElementById('box')
+
+        area.addEventListener('mouseenter' , entrou)
+        area.addEventListener('mouseout', saiu)
+        area.addEventListener('click', clicou)
+
+        function entrou(){
+            area.style.background = 'darkgreen'
+            area.style.color = 'orange'
+        }
+
+        function saiu(){
+            area.style.background = 'orange'
+            area.style.color = 'blue'
+        }
+
+        function clicou(){
+            area.style.background = 'purple'
+            area.style.color = 'black'
+        }
+
+    </script>
+</body>
+</html>

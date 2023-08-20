@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Soma de valores</h1>
+    <input type="number" name="ttq1" id="ttq1"> +
+    <input type="number" name="ttq2" id="ttq2"> = 
+    <input type="button" value="Somar" onclick="soma()"> 
+    <div id="res">Resultado</div>
+
+    <script>
+        function soma(){
+            var q1 = window.document.getElementById('ttq1')
+            var q2 = window.document.getElementById('ttq2')
+            var resul = window.document.getElementById('res')
+            var tq1 = Number(ttq1.value)
+            var tq2 = Number(ttq2.value)
+            var res = tq1 + tq2
+            resul.innerHTML = `A soma entre ${tq1} e ${tq2} é de <strong>${res}</strong>!`
+        }
+
+    </script>
+</body>
+</html>
