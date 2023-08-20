@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DOM</title>
+    <style>
+        body {
+            background-color: rgb(93, 151, 116);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Primeiros passos com o DOM</h1>
+    <p>Cole isso <strong>primeiramente</strong></p>
+    <p>Cole isso <strong>segundamente</strong></p>
+    <div class ="msg">Clique em mim</div>
+
+    <script>
+       var c = window.document.querySelector('div.msg')
+       c.innerHTML = 'Olá'
+
+    </script>
+
+</body>
+
+</html>
