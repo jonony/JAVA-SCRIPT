@@ -6,27 +6,26 @@
     <title>DETRAN</title>
 </head>
 <body>
-    <h1>Controle de velocidade permitida</h1>
-    Digite a velocidade aqui: <input type="number" name="veloc" id="veloc"> Km/h
-    <input type="button" value="verificar" onclick="calcular()">
-    <div id="res">Verifição</div>
-
+    <h1>Controle de velocidade permitida!</h1>
+    Digite aqui sua velocidade: <input type="number" name="txtvel" id="txtvel"> =
+    <input type="button" value="Verificar radar" onclick="clicar()">
+    <div id="resul">Resultado</div>
+    
     <script>
-        var imp = window.document.getElementById('veloc')
-        function calcular(){
-            var velocidade = Number(imp.value)
-            var resultado = window.document.getElementById('res')
-            resultado.innerHTML = `<p> A sua velocidade é de <strong>${velocidade}Km/h</strong> </p>`
-            if(velocidade > 60){
-                resultado.innerHTML += `Você ultrapassou a velocidade dessa via, sendo assim, você será multado!`
+        var tvel = window.document.getElementById('txtvel')
+        function clicar(){
+            var v1 = (tvel.value)
+            var res = window.document.getElementById('resul')
+            res.innerHTML = `A sua velocidade foi de <strong>${v1}Km/h</strong>.`
+
+            if(v1 > 70){
+                res.innerHTML += `<p>Portanto o senhor será MULTADO! Por excesso de velocidade!<p/>`
             }
+
             else{
-                resultado.innerHTML += `O radar relatou a velocidade inferior a <strong>60Km/h</strong>, siga em viagem normalmente :)`
+                res.innerHTML += `<p>Sua velocidade foi a baixo de <strong>70Km/h</strong>, use sempre o cinto de segurança!</p>`
             }
-            resultado.innerHTML += `<p> Dirija com cuidado! Use sempre o cinto de segurança!</P>`
-
         }
-
     </script>
 </body>
 </html>
