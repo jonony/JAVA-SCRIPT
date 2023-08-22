@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2"> = 
+    <input type="button" value="Calcular" onclick="calcular()">
+    <div id="res">Resultado</div>
+
+    <script>
+        var num1 = window.document.getElementById('txtn1')
+        var num2 = window.document.getElementById('txtn2')
+        function calcular(){
+            var add1 = Number(txtn1.value)
+            var add2 = Number(txtn2.value)
+            var resul = window.document.getElementById('res')
+            var soma = add1 + add2
+            resul.innerHTML = `A soma entre ${add1} e ${add2} resultou em ${soma}`
+        }
+
+    </script>
+</body>
+</html>
