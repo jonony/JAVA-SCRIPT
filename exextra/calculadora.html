@@ -4,8 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+
+    <style>
+        #Container{
+            background-color:cadetblue;
+            width: 480px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 20px;
+        }
+
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+
+        #titulo{
+            text-align: center;
+            font-family:Arial, Helvetica, sans-serif ;
+            padding-top: 30px;
+            
+        }
+        
+        #button{
+            width: 200px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 19px;
+        }
+
+        #num1{
+            height: 30px;
+            border-radius: 17px;
+            text-align: center;
+            font-size: 17px;
+        }
+        #num2{
+            height: 30px;
+            border-radius: 17px;
+            text-align: center;
+            font-size: 17px;
+        }
+
+        #resul{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+            padding: 20px;
+            
+        }
+    </style>
 </head>
 <body>
-   
+
+   <div id="Container">
+       <h1 id="titulo">Calculadora de soma!</h1>
+       <p>Digite aqui um número: <input type="number" name="num1" id="num1"></p> <br>
+       <p>Digite aqui outro número: <input type="number" name="num2" id="num2"></p>
+       <input type="button" value="Calcular" onclick="calcular()" id="button">
+       <div id="resul"><p>Resultado da soma</p></div>
+   </div>
+
+    <script>
+        var dado = document.getElementById('num1')
+        var dado2 = document.getElementById('num2')
+        function calcular(){
+            var dad1 = Number(num1.value)
+            var dad2 = Number(num2.value)
+            var soma = dad1 + dad2
+            var res = document.getElementById('resul')
+            res.innerHTML = `A soma entre ${dad1} e ${dad2} é igual a <strong>${soma}!</strong>`
+        }
+    </script>
+
+
 </body>
 </html>
