@@ -1,11 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Sistema de controle de estoque</h1>
+    Digite a quantidade de produtos a adicionar: <input type="number" name="add" id="add"> <br> Verificar disponibilidade: 
+    <input type="button" value="movimentar estoque" onclick="calcular()">
+    <div id="result">Resultado</div>
+
+    <script>
+        var adicionar = window.document.getElementById('add')
+        function calcular(){
+            var res = window.document.getElementById('result')
+            var adiciona = Number(adicionar.value)
+            res.innerHTML = `<strong>${adiciona}</strong> produtos `
+
+            if(adiciona < 120){
+                res.innerHTML += `foram armazenados com êxito!`
+            }
+            else{
+                res.innerHTML += `não foram armazenados :( pois a quantidade exigida excede o estoque`
+            }
+
+        }
+    </script>
+
 </body>
 </html>
