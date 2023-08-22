@@ -1,31 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DETRAN</title>
 </head>
 <body>
-    <h1>Controle de velocidade permitida!</h1>
-    Digite aqui sua velocidade: <input type="number" name="txtvel" id="txtvel"> =
-    <input type="button" value="Verificar radar" onclick="clicar()">
-    <div id="resul">Resultado</div>
-    
+    <h1>Calcule aqui a sua velocidade</h1>
+    Digite aqui a sua velocida percorrida: <input type="number" name="vel1" id="vel1"> = 
+    <input type="button" value="calcular" onclick="calcular()">
+    <div id="res">resultado</div>
+
     <script>
-        var tvel = window.document.getElementById('txtvel')
-        function clicar(){
-            var v1 = (tvel.value)
-            var res = window.document.getElementById('resul')
-            res.innerHTML = `A sua velocidade foi de <strong>${v1}Km/h</strong>.`
+        var dado =  window.document.getElementById('vel1')
+        var result =  window.document.getElementById('res')
+        function calcular(){
+           var val = Number(vel1.value)
+            result.innerHTML = `A sua ve`
 
-            if(v1 > 70){
-                res.innerHTML += `<p>Portanto o senhor será MULTADO! Por excesso de velocidade!<p/>`
-            }
-
-            else{
-                res.innerHTML += `<p>Sua velocidade foi a baixo de <strong>70Km/h</strong>, use sempre o cinto de segurança!</p>`
-            }
         }
+
     </script>
 </body>
 </html>
