@@ -6,6 +6,31 @@
     <title>DETRAN</title>
 </head>
 <body>
-   
+    <h1>DETRAN</h1>
+    <h2>Parada obrigatória! Caso seja multado, receberá um ticket de pagamento de multa</h2>
+    <p>Digite aqui a velocidade marcada: <input type="number" name="vxl1" id="vxl1"></p>
+    <p>Verifique aqui se há multa: <input type="button" value="Verificar" onclick="verificar()"></p>
+    <div id="resul"><p>A informação somente será gerada, assim que digitar a velocidade acima!</p></div>
+
+    <script>
+        var vl1 = document.getElementById('vxl1')
+        function verificar(){
+            var vl = (vxl1.value)
+            var res = document.getElementById('resul')
+            res.innerHTML = `<p>A velocidade constatada foi de <strong>${vl}Km/h</strong>!</p>`
+            if(vl <= 60){
+                res.innerHTML += `<br> A sua velocidade foi inferior ao limite dessa via, siga em segurança! `
+            }
+            else if(vl > 61 && vl < 190){
+                res.innerHTML += `<br> <p>A sua velocidade ultrapassou o permitido dessa via, portanto, será MULTADO!</p> `
+            }
+            else{
+                res.innerHTML += `<br> <p>VOCÊ ACHA QUE É O BRAIAN CAMPEÃO? NEM O RADAR PEGOU PRA TE MULTAR!</p>`
+            }
+
+        }
+
+
+    </script>
 </body>
 </html>
