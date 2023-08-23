@@ -22,7 +22,7 @@
     <script>
         var inv = document.getElementById('invt')
         function verificar(){
-            var val = (invt.value)
+            var val = Number(invt.value)
             var res = document.getElementById('resul')
             res.innerHTML = `A quantidade desejada de <strong>${val}</strong> produtos, `
             if(val > 550){
