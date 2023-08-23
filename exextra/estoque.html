@@ -6,7 +6,39 @@
     <title>Document</title>
 </head>
 <body>
-    
+  <h1>Controle de estoque</h1>  
+    <p>Digite aqui a quantidade deseja de produtos a adicionar <input type="number" name="invt" id="invt"></p>
 
+    <ul><h2>Guia de armazenamento</h2>
+        <li>Armazenando até 249 produtos, eles serão encaminhados ao estoque 1</li>
+        <li>Armazenando até 250 produtos, eles serão encaminhados ao estoque 2</li>
+        <li>Caso execeda até 550 produtos, não será armazenado</li>
+        <li>Caso coloque 0 produtos, não será executado</li>
+    </ul>
+
+    <p>Verificar disponibilidade <input type="button" value="Analisar" onclick="verificar()"></p>
+    <div id="resul">Resultado!</div>
+
+    <script>
+        var inv = document.getElementById('invt')
+        function verificar(){
+            var val = (invt.value)
+            var res = document.getElementById('resul')
+            res.innerHTML = `A quantidade desejada de <strong>${val}</strong> produtos, `
+            if(val > 550){
+                res.innerHTML +=` infelizmente não será executada, pois excede a quantidade do estoque.`
+            }
+            else if (val >= 1 && val <= 249){
+                res.innerHTML += ` serão armazenados ao estoque 1`
+            }
+            else if(val >= 250 && val <= 550){
+                res.innerHTML += ` serão armazenados ao estoque 2`
+            }
+            else{
+                res.innerHTML += ` infelizmente não será executada, pois não consta nenhum único produto`
+            }
+        }
+
+    </script>
 </body>
 </html>
