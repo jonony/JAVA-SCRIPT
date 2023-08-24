@@ -24,12 +24,7 @@ function atualizar(){
    else{
     msg.innerHTML += `Boa noite! Agora são ${hora} horas e ${minuto} minutos!`
     img.src = 'fotos/noite.png'
-   }
-
-   
-
-   
-  
+   } 
 }
 
    
