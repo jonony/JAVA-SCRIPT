@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+
+    <style>
+        #area{
+            width: 200pt;
+            height: 200pt;
+            background-color: burlywood;
+            border-radius: 24px;
+            line-height: 200px;
+            text-align: center;
+            color: rgb(61, 92, 94);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        body{
+            background-color: #80804f;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="area">
+        <h1>Mude essa cor</h1>
+    </div>
+
+    <script>
+        var area = window.document.getElementById('area')
+
+        area.addEventListener('mouseenter', entrou)
+        area.addEventListener('click', clicou)
+        area.addEventListener('mouseout', saiu)
+
+        function entrou(){
+            area.innerText = 'Você entrou!'
+            area.style.background = 'darkgreen'
+            area.style.color = 'black'
+        }
+
+        function clicou(){
+            area.innerText = 'Você clicou!'
+            area.style.background = 'darkblue'
+            area.style.color = 'black'
+        }
+
+        function saiu(){
+            area.innerText = 'Você saiu!'
+            area.style.background = 'darkorange'
+            area.style.color = 'black'
+            
+        }
+    </script>
+
+
+
+</body>
+</html>
