@@ -1,6 +1,5 @@
 var c  = 1
-while(c < 9){
-    console.log(`olá`)
-    c++
-}
 
+for(c=1;c<10;c++){
+    console.log(`Regra ${c}`)
+}
