@@ -29,10 +29,9 @@ section{
     height: 500px;
     margin: auto;
     border: 2px solid black;
-    box-shadow: 5px 3px 3px rgba(0, 0, 0, 0.288);
-    
-    
+    box-shadow: 5px 3px 3px rgba(0, 0, 0, 0.288); 
 }
+
 
 div{
     padding: 24px;
@@ -40,7 +39,7 @@ div{
 
 footer{
     font-size: 14pt;
-    color: white;
+    color: rgb(182, 173, 173);
     text-align: center;
     font-style: italic;
     margin-top: 50px;

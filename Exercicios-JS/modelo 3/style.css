@@ -18,25 +18,30 @@ header{
     font-size: 24pt;
     padding: 25px;
     color: white;
+    
 }
 
 section{
     background-color: white;
     border-radius: 23px;
     padding: 25px;
-    text-align: center;
+    text-align: start;
     width: 700px;
     height: 500px;
     margin: auto;
     border: 2px solid black;
     box-shadow: 5px 3px 3px rgba(0, 0, 0, 0.288);
-    
-    
+    line-height: 2em;    
 }
 
 div{
     padding: 24px;
+    display: flex;
+    flex-direction: column;
+    
 }
+
+
 
 footer{
     font-size: 14pt;
@@ -45,3 +50,4 @@ footer{
     font-style: italic;
     margin-top: 50px;
 }
+
